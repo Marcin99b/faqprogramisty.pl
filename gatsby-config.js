@@ -110,10 +110,8 @@ module.exports = {
         short_name: `Faq programisty`,
         start_url: `/`,
         background_color: `#ffffff`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
         display: `minimal-ui`,
+        icon: 'src/images/logo.png'
       },
     },
     `gatsby-plugin-react-helmet`,
