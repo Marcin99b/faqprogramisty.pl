@@ -1,14 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Faq Programisty`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Marcin Bigos`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `Zbiór odpowiedzi na najczęściej zadawane pytania w branży IT`,
+    siteUrl: `https://www.faqprogramisty.pl/`,
     social: {
-      twitter: `kylemathews`,
+      github: `marcin99b`,
     },
   },
   plugins: [
@@ -18,13 +17,6 @@ module.exports = {
       options: {
         path: `${__dirname}/content/blog`,
         name: `blog`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
       },
     },
     {
@@ -99,13 +91,14 @@ module.exports = {
                     frontmatter {
                       title
                       date
+                      author
                     }
                   }
                 }
               }
             `,
             output: "/rss.xml",
-            title: "Gatsby Starter Blog RSS Feed",
+            title: "Faq programisty RSS Feed",
           },
         ],
       },
@@ -113,15 +106,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Faq programisty`,
+        short_name: `Faq programisty`,
         start_url: `/`,
         background_color: `#ffffff`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-react-helmet`,

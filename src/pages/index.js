@@ -12,7 +12,7 @@ const BlogIndex = ({ data, location }) => {
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
-        <Seo title="All posts" />
+        <Seo title="Faq programisty"/>
         <Bio />
         <p>
           No blog posts found. Add markdown posts to "content/blog" (or the
@@ -25,7 +25,7 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="All posts" />
+      <Seo title="Faq programisty" />
       <Bio />
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
@@ -45,6 +45,7 @@ const BlogIndex = ({ data, location }) => {
                     </Link>
                   </h2>
                   <small>{post.frontmatter.date}</small>
+                  
                 </header>
                 <section>
                   <p
@@ -81,6 +82,7 @@ export const pageQuery = graphql`
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
           title
+          author
           description
         }
       }
