@@ -40,7 +40,6 @@ const Bio = () => {
             Github
           </OutboundLink >
         </p>
-      )
     </div>
   )
 }
