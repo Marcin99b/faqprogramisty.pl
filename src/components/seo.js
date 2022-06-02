@@ -29,7 +29,7 @@ const Seo = ({ description, lang, meta, title }) => {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
-
+      console.log(title)
   const template = title == null || title == "" || title.trim() === defaultTitle.trim()
     ? defaultTitle + " - odpowiedzi na najczęsciej zadawane pytania w branży IT" : `%s | ${defaultTitle}`;
   return (
