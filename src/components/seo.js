@@ -31,7 +31,7 @@ const Seo = ({ description, lang, meta, title }) => {
   const defaultTitle = site.siteMetadata?.title
 
   const template = title == null || title == "" || title.trim() === defaultTitle.trim()
-    ? defaultTitle : `%s | ${defaultTitle} - zbiór odpowiedzi na najczęsciej zadawane pytania w branży IT`;
+    ? defaultTitle + " - odpowiedzi na najczęsciej zadawane pytania w branży IT" : `%s | ${defaultTitle}`;
   return (
     <Helmet
       htmlAttributes={{
