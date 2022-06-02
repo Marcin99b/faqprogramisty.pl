@@ -7,6 +7,7 @@
 
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -31,16 +32,15 @@ const Bio = () => {
 
   return (
     <div className="bio">
-      {author?.name && (
         <p>
           Blog pisany przez:<br />
           <strong>{author.name}</strong>
           {` `}
-          <a href={`https://github.com/${social?.github || ``}`}>
+          <OutboundLink  href={`https://github.com/${social.github}`}>
             Github
-          </a>
+          </OutboundLink >
         </p>
-      )}
+      )
     </div>
   )
 }
