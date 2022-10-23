@@ -1,14 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Faq Programisty`,
-    author: {
-      name: `Marcin Bigos`,
-    },
     description: `Zbiór odpowiedzi na najczęściej zadawane pytania w branży IT`,
     siteUrl: `https://www.faqprogramisty.pl/`,
-    social: {
-      github: `marcin99b`,
-    },
   },
   plugins: [
     `gatsby-plugin-image`,

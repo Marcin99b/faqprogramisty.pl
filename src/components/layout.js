@@ -25,7 +25,7 @@ const Layout = ({ location, title, children }) => {
       <header className="global-header">{header}</header>
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()}, Faq programisty
+        © {new Date().getFullYear()}, <a target="_blank" href="https://github.com/Marcin99b/faqprogramisty.pl">Faq programisty</a>
       </footer>
     </div>
   )
