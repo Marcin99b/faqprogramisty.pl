@@ -1,6 +1,6 @@
 ---
 title: 1. Jak w ogóle zacząć?
-date: "2022-10-23T12:00:00.000Z"
+date: "2022-10-10T12:00:00.000Z"
 author: "Marcin"
 description: "Pierwsza i najważniejsza rzecz jaką trzeba ustalić, to co ty w ogóle chcesz robić? Jeśli masz już ustaloną wizję której jesteś pewny, można powiedzieć że masz mocno ułatwiony start... chociaż i tak, mimo wszystko, zawsze warto troche poeksperymentować, może się okazać, że miałeś złe wyobrażenia o tym wszystkim i tak na prawde będziesz wolał robić coś innego.
 <br/>
@@ -17,11 +17,11 @@ Pierwsza i najważniejsza rzecz jaką trzeba ustalić, to **co ty w ogóle chces
 
 Portale ogłoszeniowe które mogę polecić to m.in
 
-- [justjoin.it](https://justjoin.it/)
-- [nofluffjobs.com](https://nofluffjobs.com/)
-- [bulldogjob.pl](https://bulldogjob.pl/)
+- <a target="_blank" rel="noreferrer" href="https://justjoin.it/">justjoin.it</a>
+- <a target="_blank" rel="noreferrer" href="https://nofluffjobs.com/">nofluffjobs.com</a>
+- <a target="_blank" rel="noreferrer" href="https://bulldogjob.pl/">bulldogjob.pl</a>
 
-Warto mieć też konto na [linkedin.com](https://www.linkedin.com/) (portal społecznościowy na którym wielu rekruterów szuka pracowników, ale mają też [zakładkę z ogłoszeniami](https://www.linkedin.com/jobs/))
+Warto mieć też konto na <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/">linkedin.com</a> (portal społecznościowy na którym wielu rekruterów szuka pracowników, ale mają też <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/jobs/">zakładkę z ogłoszeniami</a>)
 
 Po wejściu na dowolny z nich, zobaczysz, że co prawda narzędzi jest mnóstwo, ale widać dużo podobieństw i schematów, przykładowo
 
