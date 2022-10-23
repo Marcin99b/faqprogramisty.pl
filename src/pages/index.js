@@ -24,10 +24,6 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Seo title={null} />
-      <header>
-        <p>Zaczynasz naukę programowania? Jesteś na jednym z początkowych etapów? Tutaj znajdziesz odpowiedzi na najczęściej pojawiające się pytania</p>
-      </header>
-      
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
