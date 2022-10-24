@@ -1,5 +1,5 @@
 ---
-title: 4. Na co zwrócić uwage podczas rekrutacji?
+title: 4. Na co zwrócić uwagę podczas rekrutacji?
 date: "2022-10-24T12:00:00.000Z"
 author: "Marcin"
 description: "Wiele osób ma na podstawie opowieści, legend i filmów, zbudowane dziwne wyobrażenia o rekrutacjach. To nie jest test, tylko rozmowa podczas której obie strony starają się nawzajem ocenić... i warto z tego skorzystać."
