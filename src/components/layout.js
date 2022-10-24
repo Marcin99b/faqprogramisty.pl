@@ -29,7 +29,7 @@ const Layout = ({ location, title, children }) => {
       <main>{children}</main>
       <footer>
         © {new Date().getFullYear()}, <a target="_blank" rel="noreferrer" href="https://github.com/Marcin99b/faqprogramisty.pl">Faq programisty</a>
-        <p>Jeśli znalazłeś jakiś błąd lub masz pomysł co można dodać/poprawić?<br/><a target="_blank" rel="noreferrer" href="https://github.com/Marcin99b/faqprogramisty.pl/issues">Dodaj issue na githubie projektu</a></p>
+        <p>Znalazłeś jakiś błąd lub masz pomysł co można dodać/poprawić?<br/><a target="_blank" rel="noreferrer" href="https://github.com/Marcin99b/faqprogramisty.pl/issues">Dodaj issue na githubie projektu</a></p>
       </footer>
     </div>
   )
