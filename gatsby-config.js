@@ -1,12 +1,14 @@
+const siteUrl = process.env.URL || `https://www.faqprogramisty.pl/`
+
 module.exports = {
   siteMetadata: {
     title: `Faq Programisty`,
     description: `Zbiór odpowiedzi na najczęściej zadawane pytania w branży IT`,
-    siteUrl: `https://www.faqprogramisty.pl/`,
+    siteUrl: siteUrl,
   },
   plugins: [
     {
-      resolve: 'gatsby-plugin-sitemap',
+      resolve: "gatsby-plugin-sitemap",
       options: {
         query: `
         {
@@ -15,7 +17,6 @@ module.exports = {
               siteUrl
             }
           }
-
           allSitePage {
             edges {
               node {
@@ -27,10 +28,11 @@ module.exports = {
             }
           }
       }`,
+        resolveSiteUrl: () => siteUrl,
         serialize: ({ site, allSitePage }) =>
-          allSitePage.edges.map((edge) => ({
+          allSitePage.edges.map(edge => ({
             url: `${site.siteMetadata.siteUrl}${edge.node.path}`,
-            changefreq: 'daily',
+            changefreq: "daily",
             priority: 0.7,
             lastmodISO: edge.node.context.updatedAt,
           })),
@@ -71,9 +73,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: [
-          `G-9LC3PXBFQW`,
-        ]
+        trackingIds: [`G-9LC3PXBFQW`],
       },
     },
     {
@@ -82,12 +82,12 @@ module.exports = {
         // String value for your clarity project id
         // Project id is found in your clarity dashboard url
         // https://clarity.microsoft.com/projects/view/{clarity_project_id}/
-        clarity_project_id: 'e7t37l92kd',
+        clarity_project_id: "e7t37l92kd",
         // Boolean value for enabling clarity while developing
         // true will enable clarity tracking code on both development and production environments
         // false will enable clarity tracking code on production environment only
         //
-        enable_on_dev_env: true
+        enable_on_dev_env: true,
       },
     },
     {
@@ -152,7 +152,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#ffffff`,
         display: `minimal-ui`,
-        icon: 'src/images/logo.png'
+        icon: "src/images/logo.png",
       },
     },
     `gatsby-plugin-react-helmet`,
