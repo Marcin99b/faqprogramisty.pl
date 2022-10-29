@@ -154,9 +154,12 @@ module.exports = {
               }
             }
           }`,
-        resolveSiteUrl: data => data.site.siteMetadata.siteUrl,
+        resolveSiteUrl: data => {
+          return data.site.siteMetadata.siteUrl
+        },
+        resolvePages: data =>
+          Array.from(JSON.parse(JSON.stringify(data.allSitePage.nodes))),
         resolvePagePath: page => page.path,
-        resolvePages: data => data.allSitePage.nodes,
         filterPages: (
           page,
           excludedRoute,
