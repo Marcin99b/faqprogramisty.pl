@@ -5,7 +5,7 @@ module.exports = {
   siteMetadata: {
     title: `Faq Programisty`,
     description: `Zbiór odpowiedzi na najczęściej zadawane pytania w branży IT`,
-    siteUrl: siteUrl,
+    siteUrl: `https://www.faqprogramisty.pl/`,
   },
   plugins: [
     /*
