@@ -5,38 +5,33 @@ module.exports = {
   siteMetadata: {
     title: `Faq Programisty`,
     description: `Zbiór odpowiedzi na najczęściej zadawane pytania w branży IT`,
-    siteUrl: `https://www.faqprogramisty.pl/`,
+    siteUrl: siteUrl,
   },
   plugins: [
-    /*
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         query: `{
-          site {
-            siteMetadata {
-              siteUrlNoSlash
-            }
-          }
-          allSitePage {
-            edges {
-              node {
-                path
-              }
-            }
-          }
-          allMarkdownRemark {
-            edges {
-              node {
-                fields {
-                  slug
-                }
-              }
-            }
-          }
-        }`,
+  allSitePage {
+    edges {
+      node {
+        path
+      }
+    }
+  }
+  allMarkdownRemark {
+    edges {
+      node {
+        fields {
+          slug
+        }
+      }
+    }
+  }
+}
+`,
         resolveSiteUrl: () => siteUrl,
-        serialize: ({ site, allSitePage, allMarkdownRemark }) => {
+        serialize: ({ allSitePage, allMarkdownRemark }) => {
           let pages = []
           allSitePage.edges.map(edge => {
             pages.push({
@@ -57,7 +52,14 @@ module.exports = {
         },
       },
     },
-    */
+    `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/blog`,
+        name: `blog`,
+      },
+    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -144,7 +146,6 @@ module.exports = {
                     frontmatter {
                       title
                       date
-                      author
                     }
                   }
                 }

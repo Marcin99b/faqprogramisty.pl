@@ -1,7 +1,6 @@
 ---
 title: 3. Czy szkoła ma znaczenie?
 date: "2022-10-23T12:00:00.000Z"
-author: "Marcin"
 description: "To zależy jak do tego podejdziesz, na pewno jakieś ma, ale zdecydowanie nie takie jak większość osób myśli"
 ---
 

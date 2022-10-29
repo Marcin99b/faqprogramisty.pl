@@ -1,7 +1,6 @@
 ---
 title: 1. Jak w ogóle zacząć?
 date: "2022-10-21T12:00:00.000Z"
-author: "Marcin"
 description: "Pierwsza i najważniejsza rzecz jaką trzeba ustalić, to co ty w ogóle chcesz robić? Jeśli masz już ustaloną wizję której jesteś pewny, można powiedzieć że masz mocno ułatwiony start... chociaż i tak, mimo wszystko, zawsze warto troche poeksperymentować, może się okazać, że miałeś złe wyobrażenia o tym wszystkim i tak na prawde będziesz wolał robić coś innego.
 <br/>
 No właśnie... eksperymenty... od nich trzeba zacząć."

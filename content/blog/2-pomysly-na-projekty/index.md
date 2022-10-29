@@ -1,7 +1,6 @@
 ---
 title: 2. Pomysły na projekty
 date: "2022-10-22T12:00:00.000Z"
-author: "Marcin"
 description: "Zdecydowałeś już z jakiego zestawu narzędzi chcesz skorzystać, ale nie masz pomysłu na projekt? Zawsze możesz skorzystać z jednego z polecanych standardowych projektów... albo zamiast klepania kolejnej listy todo lub uproszczonego sklepu, możesz zrobić coś ciekawszego. Przygotowałem listę mniej oklepanych pomysłów na projekty, które mogą cię zainspirować do zrobienia czegoś ciekawego."
 ---
 
