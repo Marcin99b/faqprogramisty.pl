@@ -8,50 +8,6 @@ module.exports = {
     siteUrl: siteUrl,
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        query: `{
-  allSitePage {
-    edges {
-      node {
-        path
-      }
-    }
-  }
-  allMarkdownRemark {
-    edges {
-      node {
-        fields {
-          slug
-        }
-      }
-    }
-  }
-}
-`,
-        resolveSiteUrl: () => siteUrl,
-        serialize: ({ allSitePage, allMarkdownRemark }) => {
-          let pages = []
-          allSitePage.edges.map(edge => {
-            pages.push({
-              url: siteUrlNoSlash + edge.node.path,
-              changefreq: `daily`,
-              priority: 0.7,
-            })
-          })
-          allMarkdownRemark.edges.map(edge => {
-            pages.push({
-              url: `${siteUrlNoSlash}/${edge.node.fields.slug}`,
-              changefreq: `daily`,
-              priority: 0.7,
-            })
-          })
-
-          return pages
-        },
-      },
-    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -172,5 +128,54 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/sitemap.xml`,
+        exclude: [
+          `/dev-404-page`,
+          `/404`,
+          `/404.html`,
+          `/offline-plugin-app-shell-fallback`,
+        ],
+        createLinkInHead: true,
+        sitemapSize: Infinity,
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+
+            allSitePage {
+              nodes {
+                path
+              }
+            }
+          }`,
+        resolveSiteUrl: data => data.site.siteMetadata.siteUrl,
+        resolvePagePath: page => page.path,
+        resolvePages: data => data.allSitePage.nodes,
+        filterPages: (
+          page,
+          excludedRoute,
+          { minimatch, withoutTrailingSlash, resolvePagePath }
+        ) =>
+          minimatch(
+            withoutTrailingSlash(
+              resolvePagePath(page),
+              withoutTrailingSlash(excludedRoute)
+            )
+          ),
+        serialize: (page, siteUrl, { resolvePagePath }) => {
+          return {
+            url: `${siteUrl}${resolvePagePath(page)}`,
+            changefreq: `daily`,
+            priority: 0.7,
+          }
+        },
+      },
+    },
   ],
 }
