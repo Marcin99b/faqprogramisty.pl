@@ -1,4 +1,5 @@
 const siteUrl = process.env.URL || `https://www.faqprogramisty.pl/`
+const siteUrlNoSlash = siteUrl.trim("/")
 
 module.exports = {
   siteMetadata: {
@@ -7,7 +8,56 @@ module.exports = {
     siteUrl: siteUrl,
   },
   plugins: [
-    `gatsby-plugin-sitemap`,
+    /*
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        query: `{
+          site {
+            siteMetadata {
+              siteUrlNoSlash
+            }
+          }
+          allSitePage {
+            edges {
+              node {
+                path
+              }
+            }
+          }
+          allMarkdownRemark {
+            edges {
+              node {
+                fields {
+                  slug
+                }
+              }
+            }
+          }
+        }`,
+        resolveSiteUrl: () => siteUrl,
+        serialize: ({ site, allSitePage, allMarkdownRemark }) => {
+          let pages = []
+          allSitePage.edges.map(edge => {
+            pages.push({
+              url: siteUrlNoSlash + edge.node.path,
+              changefreq: `daily`,
+              priority: 0.7,
+            })
+          })
+          allMarkdownRemark.edges.map(edge => {
+            pages.push({
+              url: `${siteUrlNoSlash}/${edge.node.fields.slug}`,
+              changefreq: `daily`,
+              priority: 0.7,
+            })
+          })
+
+          return pages
+        },
+      },
+    },
+    */
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -94,6 +144,7 @@ module.exports = {
                     frontmatter {
                       title
                       date
+                      author
                     }
                   }
                 }

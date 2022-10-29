@@ -78,6 +78,7 @@ export const pageQuery = graphql`
         frontmatter {
           date(formatString: "DD.MM.YYYY")
           title
+          author
           description
         }
       }
