@@ -7,45 +7,7 @@ module.exports = {
     siteUrl: siteUrl,
   },
   plugins: [
-    {
-      resolve: "gatsby-plugin-sitemap",
-      options: {
-        query: `
-        {
-          site {
-            siteMetadata {
-              siteUrl
-            }
-          }
-          allSitePage {
-            edges {
-              node {
-                path
-                context {
-                  updatedAt
-                }
-              }
-            }
-          }
-      }`,
-        resolveSiteUrl: () => siteUrl,
-        serialize: ({ site, allSitePage }) =>
-          allSitePage.edges.map(edge => ({
-            url: `${site.siteMetadata.siteUrl}${edge.node.path}`,
-            changefreq: "daily",
-            priority: 0.7,
-            lastmodISO: edge.node.context.updatedAt,
-          })),
-      },
-    },
-    `gatsby-plugin-image`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
-      },
-    },
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -132,7 +94,6 @@ module.exports = {
                     frontmatter {
                       title
                       date
-                      author
                     }
                   }
                 }
