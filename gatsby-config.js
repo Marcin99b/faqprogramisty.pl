@@ -125,9 +125,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+
+    /*
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
@@ -159,7 +162,7 @@ module.exports = {
         },
         resolvePages: data =>
           Array.from(JSON.parse(JSON.stringify(data.allSitePage.nodes))),
-        resolvePagePath: page => page.path,
+        //resolvePagePath: page => page.path,
         filterPages: (
           page,
           excludedRoute,
@@ -180,5 +183,6 @@ module.exports = {
         },
       },
     },
+    */
   ],
 }
