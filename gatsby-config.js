@@ -45,6 +45,10 @@ module.exports = {
       options: {
         trackingIds: [`G-9LC3PXBFQW`],
       },
+      pluginConfig: {
+        // Puts tracking script in the head instead of the body
+        head: true,
+      },
     },
     {
       resolve: `gatsby-plugin-clarity`,
