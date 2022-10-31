@@ -44,9 +44,6 @@ module.exports = {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
         trackingIds: [`G-9LC3PXBFQW`],
-      },
-      pluginConfig: {
-        // Puts tracking script in the head instead of the body
         head: true,
       },
     },
