@@ -52,7 +52,7 @@ const Seo = ({ description, lang, meta, title }) => {
         },
         {
           property: `og:title`,
-          content: title,
+          content: title ? title : defaultTitle,
         },
         {
           property: `og:description`,
