@@ -4,7 +4,7 @@ const siteUrlNoSlash = siteUrl.trim("/")
 module.exports = {
   siteMetadata: {
     title: `Faq Programisty`,
-    description: `Zbiór odpowiedzi na najczęściej zadawane pytania w branży IT`,
+    description: `Odpowiedzi na najczęściej zadawane pytania w branży IT`,
     siteUrl: siteUrl,
   },
   plugins: [

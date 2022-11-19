@@ -32,7 +32,7 @@ const Seo = ({ description, lang, meta, title }) => {
   const template =
     title === null || title === "" || title.trim() === defaultTitle.trim()
       ? defaultTitle +
-        " - odpowiedzi na najczęsciej zadawane pytania w branży IT"
+        " - odpowiedzi na najczęściej zadawane pytania w branży IT"
       : `%s | ${defaultTitle}`
   return (
     <Helmet
@@ -84,7 +84,7 @@ const Seo = ({ description, lang, meta, title }) => {
 }
 
 Seo.defaultProps = {
-  lang: `en`,
+  lang: `pl`,
   meta: [],
   description: ``,
 }
